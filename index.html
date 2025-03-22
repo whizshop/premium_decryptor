@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHIZ DECRYPTOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WHIZ DECRYPTOR</h1>
+        <div class="drop-area" id="dropArea">
+            <p>Drag & Drop Config File Here</p>
+            <input type="file" id="fileInput" hidden>
+            <button onclick="document.getElementById('fileInput').click()">Select File</button>
+        </div>
+        <div id="outputBox">
+            <h3>Decrypted Config:</h3>
+            <pre><code id="configOutput" class="language-json"></code></pre>
+            <button id="copyButton" onclick="copyToClipboard()">Copy</button>
+        </div>
+    </div>
+</body>
+</html>
