@@ -1,11 +1,17 @@
 body {
-    background: url('https://source.unsplash.com/1600x900/?nebula,space') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(45deg, red, blue, green, yellow, orange, purple);
+    background-size: 400% 400%;
+    animation: gradientBG 10s infinite alternate;
     font-family: 'Orbitron', sans-serif;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 .container {
@@ -14,28 +20,43 @@ body {
 }
 
 .drop-area {
-    border: 2px dashed white;
+    border: 3px solid white;
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff0000, #ff7300, #ffea00, #48ff00, #00fff2, #2b65ff, #7a00ff);
+    color: black;
+    font-weight: bold;
 }
 
 .drop-area:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
+    color: black;
+    border-color: black;
 }
 
 #outputBox {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin-top: 20px;
     display: none;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+h1 {
+    background: -webkit-linear-gradient(45deg, red, yellow, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
 }
 
 button {
-    background: lime;
+    background: linear-gradient(90deg, red, yellow, green);
     border: none;
     padding: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
